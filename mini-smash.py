@@ -686,7 +686,7 @@ def main():
             index=0 if st.session_state.get("environment", "Test") == "Test" else 1,
             key="environment"
         )
-        st.text_input("PO Prefix", key="po_prefix", value=st.session_state.get("po_prefix", "RCH"))
+        st.text_input("PO Prefix", key="po_prefix")
 
         # Environment quick checks & caution banner
         env_suffix = "_PROD" if st.session_state.get("environment", "Test") == "Production" else ""

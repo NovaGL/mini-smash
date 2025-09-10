@@ -1,0 +1,7 @@
+streamlit
+pandas
+requests
+camelot-py[cv]
+PyPDF2
+pdfplumber
+pillow

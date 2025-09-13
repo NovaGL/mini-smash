@@ -2933,10 +2933,10 @@ def main():
         # Environment quick checks & caution banner
         env_suffix = "_PROD" if st.session_state.get("environment", "Test") == "Production" else ""
         instance = os.environ.get(f"COUPA_INSTANCE{env_suffix}", "")
-        ident = os.environ.get(f"PO_IDENTIFIER{env_suffix}", "")
-        secret = os.environ.get(f"PO_SECRET{env_suffix}", "")
+        ident = os.environ.get(f"INV_IDENTIFIER{env_suffix}", "")
+        secret = os.environ.get(f"INV_SECRET{env_suffix}", "")
         if not instance or not ident or not secret:
-            st.warning("⚠️ Missing one or more required environment variables for the selected environment (COUPA_INSTANCE, PO_IDENTIFIER, PO_SECRET).")
+            st.warning("⚠️ Missing one or more required environment variables for the selected environment (COUPA_INSTANCE, INV_IDENTIFIER, INV_SECRET).")
 
         st.header("Debug")
         st.toggle(

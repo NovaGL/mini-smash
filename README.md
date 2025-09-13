@@ -1,6 +1,7 @@
 # 📄 miniSmash Invoice Creator
 
-A powerful Streamlit application for automated invoice processing and creation in Coupa. Extract PO numbers from PDFs and images using optimized OCR, verify them in Coupa, edit invoice details, and create invoices in batch with built-in duplicate detection and real-time progress tracking.
+A powerful Streamlit application for automated invoice processing and creation in Coupa. 
+Extract PO numbers from PDFs and images using optimized OCR, verify them in Coupa, edit invoice details, and create invoices in batch with built-in duplicate detection and real-time progress tracking.
 
 ## ✨ Features
 
@@ -27,8 +28,8 @@ A powerful Streamlit application for automated invoice processing and creation i
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd miniSmash-Invoice-Creator
+git clone [<repository-url>](https://github.com/NovaGL/mini-smash/)
+cd mini-smash
 ```
 
 2. Install required packages:
@@ -40,7 +41,7 @@ pip install streamlit requests pandas pillow easyocr pdf2image streamlit-tags
 
 4. Run the application:
 ```bash
-streamlit run pdf_to_csv.py
+streamlit run miniSmash.py
 ```
 
 ## ⚙️ Configuration
@@ -51,13 +52,13 @@ Set the following environment variables for your target environments:
 
 **Test Environment:**
 - `COUPA_INSTANCE` - Your Coupa instance name (e.g., "mycompany")
-- `PO_IDENTIFIER` - Your OAuth client identifier
+- `INV_IDENTIFIER` - Your OAuth client identifier
 - `PO_SECRET` - Your OAuth client secret
 
 **Production Environment:**
 - `COUPA_INSTANCE_PROD` - Production instance name
-- `PO_IDENTIFIER_PROD` - Production OAuth client identifier  
-- `PO_SECRET_PROD` - Production OAuth client secret
+- `INV_IDENTIFIER_PROD` - Production OAuth client identifier  
+- `INV_SECRET_PROD` - Production OAuth client secret
 
 ### Required OAuth Scopes (Client Credentials Grant)
 
@@ -70,7 +71,7 @@ Your OAuth application in Coupa must have these scopes:
 
 ### 1. Configure Settings (Sidebar)
 - **Environment**: Select Test or Production environment
-- **PO Prefixes**: Set prefixes to search for (looks for prefix + 6 digits, e.g., RCH123456, PO456789)
+- **PO Prefixes**: Set prefixes to search for (looks for prefix + 6 digits, e.g. PO456789)
 - **Auto-detect Invoice Numbers**: Toggle automatic extraction using patterns like:
   - "INVOICE NUMBER:", "INVOICE NO:", "INVOICE#", "INVOICE #:", "INV:", "INVOICE:"
   - Looks for numbers immediately following these text patterns
@@ -152,9 +153,6 @@ Enable Debug Mode in the sidebar to see what's happening:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🆘 Support
 
@@ -174,4 +172,3 @@ If you encounter any issues or have questions:
 
 ---
 
-Made with ❤️ using Streamlit and EasyOCR

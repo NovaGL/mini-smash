@@ -28,7 +28,7 @@ Extract PO numbers from PDFs and images using optimized OCR, verify them in Coup
 
 1. Clone the repository:
 ```bash
-git clone [<repository-url>](https://github.com/NovaGL/mini-smash/)
+git clone https://github.com/NovaGL/mini-smash.git
 cd mini-smash
 ```
 
